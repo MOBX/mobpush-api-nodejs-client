@@ -1,0 +1,31 @@
+{
+  "name": "mobpush-api-nodejs-client",
+  "version": "1.0.0",
+  "description": "MobPush SDK for NodeJs.",
+  "main": "index.js",
+  "engines": {
+    "node": ">=0.12"
+  },
+  "keywords": [
+    "MobPush",
+    "MobPush Client",
+    "MobPush API",
+    "push sdk",
+    "推送SDK"
+  ],
+  "author": "mobpush.mob.com",
+  "license": "MIT",
+  "homepage": "https://www.mob.com",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:MOBX/mobpush-api-nodejs-client.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MOBX/mobpush-api-java-client.git"
+  },
+  "dependencies": {
+    "crypto": "0.0.3",
+    "express": "^4.16.2",
+    "request": "^2.51.0"
+  }
+}
