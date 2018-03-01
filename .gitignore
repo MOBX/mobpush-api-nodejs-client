@@ -2,13 +2,7 @@
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 # Package Files #
-*.war
-*.ear
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
-*.settings
-*.prefs
-org.eclipse.core.resources.prefs
 target
 *.classpath
 *.project
@@ -22,6 +16,6 @@ logs/
 *.iml
 .svn
 *.svn
-
+node_modules/
 #project
 .pydevproject
