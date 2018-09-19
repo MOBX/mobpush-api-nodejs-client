@@ -42,7 +42,7 @@ var pushClient = {
             callback("pushwork is null ", null);
             return false;
         }
-        var path = pushUrl + "/push";
+        var path = pushUrl + "/v2/push";
         if (typeof json == 'string') {
             json = JSON.parse(json);
         }
