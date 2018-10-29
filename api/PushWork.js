@@ -48,6 +48,7 @@ function buildTarget(){
         }if(target == 6 && !val){
             this.payload.block = val;
         }
+		this.payload.target = target;
     }
     return this;
 }
