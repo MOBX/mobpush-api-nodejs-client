@@ -46,7 +46,6 @@ var pushClient = {
         if (typeof json == 'string') {
             json = JSON.parse(json);
         }
-        json.appkey = appkey;
         if (!json.content) {
             callback("content is null ", null);
             return false;
@@ -56,12 +55,21 @@ var pushClient = {
         } else if (!json.type) {
             callback("type is null ", null);
             return false;
+        } else if (!appkey) {
+            callback("appkey is null ", null);
+            return false;
+        } else if (!appSecret) {
+            callback("appSecret is null ", null);
+            return false;
+        } else if (!json.plats) {
+            callback("plats is null or error", null);
+            return false;
         }
         httpCommon.post(appkey, appSecret, path, json, function (err, data) {
             if (err != null) {
                 callback && callback(err, data);
             } else {
-                callback && callback(null, true);
+                callback && callback(null, data);
             }
         });
     }

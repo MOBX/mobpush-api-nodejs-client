@@ -21,6 +21,20 @@ function buildExtra(unlineTime,extras,iosProduction){
 }
 
 /**
+ * moblink 跳转
+ * @param {moblink url} scheme 
+ * @param {moblink 参数} data 
+ * @return PushWork
+ */
+function buildScheme(scheme,data){
+    if(scheme != null)
+        this.payload.scheme = scheme;
+    if(scheme != null)
+        this.payload.data = data;
+    return this;
+}
+
+/**
  * 设置推送范围
  * @param target
  * @param tags
@@ -119,6 +133,7 @@ PushWork.prototype.buildExtra = buildExtra;
 PushWork.prototype.buildTarget = buildTarget;
 PushWork.prototype.buildAndroid = buildAndroid;
 PushWork.prototype.buildIos = buildIos;
+PushWork.prototype.buildScheme = buildScheme;
 
 PushWork.prototype.ALL = [1,2]; //所有平台
 PushWork.prototype.notify=1; //通知消息
